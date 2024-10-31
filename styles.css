@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #111;
+}
+
+.rangoli {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff4081, #ffeb3b, #4caf50, #2196f3);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.rangoli:hover {
+    transform: scale(1.05);
+}
+
+.rangoli:hover {
+    background: linear-gradient(45deg, #ffeb3b, #ff4081, #2196f3, #4caf50);
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #091057;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.rangoli:hover .message {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------------ */
+
+
